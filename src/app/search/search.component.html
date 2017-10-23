@@ -1,0 +1,36 @@
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<div class= "searchContainer">
+  <div class="wrap">
+    <div class="search">
+        <input name = "searchValue" #searchValue type="text" class="searchTerm" placeholder="What are you looking for?">
+        <button type="submit" class="searchButton" (click)="searchText(searchValue)">
+          <i class="fa fa-search"></i>
+        </button>
+    </div>
+  </div>
+  <div class="output">
+    <ul *ngFor="let result of searchResults">
+      <li>
+        {{result}}
+      </li>
+    </ul>
+    
+    <table>
+      <tr>
+        <th>
+          <img src={{giphyUrls[0]}} class="img-style" onerror="assets/tbd.png">
+        </th>
+        <th>
+          <img src={{giphyUrls[1]}} class="img-style">
+        </th>
+        <th>
+          <img src={{giphyUrls[2]}} class="img-style">
+        </th>
+      </tr>
+    </table>
+
+  </div>
+</div>
+ 
